@@ -1,25 +1,23 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import Card from './Card'
+import Extracontent from './ExtraContent'
+import Faker from 'faker'
 
-const App = () => {
+const Cards = () => {
   return (
-    <div className="ui container comments">
-      <div className="comment">
-        <a href="/" className="avatar">
-          <img src="/" alt="avatar"/>
-        </a>
-        <div className="content">
-          <a href="/" className="author">
-            CEB
-          </a>
-          <div className="metadata">
-            <span className="date">Today 06:00 PM</span>
-          </div>
-          <div className="text">Nice comment</div>
-        </div>
-      </div>
+    <div className="ui cards">
+      <Card meta = {Faker.commerce.productName()} name={Faker.name.findName()} description={Faker.lorem.sentence()}>
+        <Extracontent/>
+      </Card>
+      <Card meta = {Faker.commerce.productName()} name={Faker.name.findName()} description={Faker.lorem.sentence()}>
+        <Extracontent/>
+      </Card>
+      <Card meta = {Faker.commerce.productName()} name={Faker.name.findName()} description={Faker.lorem.sentence()}>
+        <Extracontent/>
+      </Card>
     </div>
-  );
+  )
 }
 
-ReactDOM.render(<App />, document.querySelector("#root"));
+ReactDOM.render(<Cards/>, document.querySelector('#root'))
