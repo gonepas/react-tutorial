@@ -1,0 +1,39 @@
+.season-display {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-display {
+    width: 400px;
+    height: fit-content;
+}
+
+.season-display i.top-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.season-display i.bottom-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.season-display.winter {
+    background-color: #94dbd2;
+}
+
+.season-display.summer {
+    background-color: #e7912a;
+}
+
+.season-display.winter i {
+    color: #2c2cca;
+}
+
+.season-display.summer i {
+    color: #e71f1f;
+}
